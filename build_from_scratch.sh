@@ -11,12 +11,8 @@ export TESTRELDIR=\$PSANA_PREFIX/install
 
 # variables needed for conda
 module load python/3.7-anaconda-2019.07
-conda env list | grep psana2_py37
-if [ $? -eq 0 ]
-then
-  source /usr/common/software/python/3.7-anaconda-2019.07/etc/profile.d/conda.sh
-  conda activate $PWD/psana2_py37
-fi
+source /usr/common/software/python/3.7-anaconda-2019.07/etc/profile.d/conda.sh
+conda activate $PWD/psana2_py37
 EOF
 
 source env.sh
