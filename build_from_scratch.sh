@@ -56,7 +56,7 @@ pushd mpi4py-3.0.0
 popd
 
 conda activate $PWD/psana2_py37
-pip install git+https://github.com/NERSC/slurm-magic.git
+pip install git+https://github.com/muammar/slurm-magic.git
 conda install ipykernel
 
 echo
