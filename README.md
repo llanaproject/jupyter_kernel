@@ -37,7 +37,7 @@ to make it:
 git clone https://github.com/llanaproject/psana_jupyter_kernel
 cd psana_jupyter_kernel
 export DIST=$PWD
-chmod +x build_from_scratch.sh
+chmod +x *.sh
 ./build_from_scratch.sh
 ```
 
