@@ -39,21 +39,10 @@ conda install ipykernel
 
 # Build psana
 git clone https://github.com/slac-lcls/lcls2.git
-#     module swap PrgEnv-intel PrgEnv-gnu
-#     CC=/opt/gcc/7.3.0/bin/gcc CXX=/opt/gcc/7.3.0/bin/g++ ./build_all.sh -d
+source scl_source enable devtoolset-7
 
 pushd $PSANA_PREFIX
     ./build_all.sh -d
-popd
-
-# Remove mpi4py from psana conda env and rebuild mpi4py with NERSC cray mpich
-conda uninstall -y mpi4py
-wget https://bitbucket.org/mpi4py/mpi4py/downloads/mpi4py-3.0.0.tar.gz
-tar zxvf mpi4py-3.0.0.tar.gz
-module unload craype-hugepages2M
-pushd mpi4py-3.0.0
-    python setup.py build --mpicc="$(which cc) -shared"
-    python setup.py install
 popd
 
 conda activate $PWD/psana2_py37
