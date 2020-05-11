@@ -58,6 +58,7 @@ popd
 conda activate $PWD/psana2_py37
 pip install git+https://github.com/muammar/slurm-magic.git
 pip install dask distributed
+pip install sklearn
 conda install ipykernel
 
 echo
