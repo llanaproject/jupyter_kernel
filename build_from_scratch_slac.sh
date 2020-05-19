@@ -30,7 +30,7 @@ fi
 # Remove conda installation
 rm -rf psana2_py37
 
-# Create a new conda env 
+# Create a new conda env
 conda env create -f env_create.yaml -p ./psana2_py37
 conda config --append envs_dirs $PWD/psana2_py37
 source $HOME/miniconda3/etc/profile.d/conda.sh
@@ -47,9 +47,9 @@ popd
 
 conda activate $PWD/psana2_py37
 pip install git+https://github.com/muammar/slurm-magic.git
-pip install dask distributed
-pip install sklearn
+pip install dask distributed sklearn multipledispatch numba
 conda install ipykernel
+conda install -c plotly plotly
 
 echo
 echo "Done. Please run 'source env.sh' to use this build."
