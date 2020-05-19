@@ -30,7 +30,6 @@ dependencies:
   - h5py
   - krtc
   - roentdek
-  - cpsw     # daq packages
   - p4p
   - libfabric
   - rapidjson
@@ -44,4 +43,3 @@ dependencies:
   - rogue-ne
   - bluesky
   - ophyd
-  - pcieapps
