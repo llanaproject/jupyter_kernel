@@ -60,6 +60,9 @@ pip install git+https://github.com/muammar/slurm-magic.git
 pip install dask distributed sklearn multipledispatch numba
 conda install ipykernel
 conda install -c plotly plotly
+conda install -c conda-forge matplotlib ipympl
+conda install -c pyviz holoviews bokeh
+jupyter labextension install @pyviz/jupyterlab_pyviz
 
 echo
 echo "Done. Please run 'source env.sh' to use this build."
