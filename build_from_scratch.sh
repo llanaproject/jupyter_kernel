@@ -64,5 +64,6 @@ conda install -y -c conda-forge matplotlib ipympl
 conda install -y -c pyviz holoviews bokeh
 jupyter labextension install @pyviz/jupyterlab_pyviz
 
+chmod +x start_kernel.sh
 echo
 echo "Done. Please run 'source env.sh' to use this build."
