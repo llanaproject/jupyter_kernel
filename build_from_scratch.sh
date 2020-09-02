@@ -36,7 +36,7 @@ conda env create -f env_create.yaml -p ./psana2_py37
 conda config --append envs_dirs $PWD/psana2_py37
 source /usr/common/software/python/3.7-anaconda-2019.07/etc/profile.d/conda.sh
 conda activate $PWD/psana2_py37
-conda install ipykernel
+conda install -y ipykernel
 
 # Build psana
 git clone https://github.com/slac-lcls/lcls2.git
@@ -58,8 +58,12 @@ popd
 conda activate $PWD/psana2_py37
 pip install git+https://github.com/muammar/slurm-magic.git
 pip install dask distributed sklearn multipledispatch numba
-conda install ipykernel
-conda install -c plotly plotly
+conda install -y ipykernel jupyterlab
+conda install -y -c plotly plotly
+conda install -y -c conda-forge matplotlib ipympl
+conda install -y -c pyviz holoviews bokeh
+jupyter labextension install @pyviz/jupyterlab_pyviz
 
+chmod +x start_kernel.sh
 echo
 echo "Done. Please run 'source env.sh' to use this build."
