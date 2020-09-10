@@ -48,6 +48,7 @@ popd
 conda activate $PWD/psana2_py37
 pip install git+https://github.com/muammar/slurm-magic.git
 pip install dask distributed sklearn multipledispatch numba
+conda install -y -c conda-forge 'nodejs>=10'
 conda install -y ipykernel jupyterlab
 conda install -y -c plotly plotly
 conda install -y -c conda-forge matplotlib ipympl
