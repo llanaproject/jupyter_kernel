@@ -60,7 +60,7 @@ pip install git+https://github.com/muammar/slurm-magic.git
 pip install dask distributed sklearn multipledispatch numba
 conda install -y ipykernel jupyterlab
 conda install -y -c plotly plotly
-conda install -y -c conda-forge matplotlib ipympl
+conda install -y -c conda-forge matplotlib ipympl ipywidgets
 conda install -y -c pyviz holoviews bokeh
 jupyter labextension install @pyviz/jupyterlab_pyviz
 
